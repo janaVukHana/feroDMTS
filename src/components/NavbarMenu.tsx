@@ -39,7 +39,7 @@ const StyledNavLink = styled(NavLink)`
 `
 
 const NavbarMenu = () => {
-    const {active, showMenu, setShowMenu} = useStateContext()
+    const {showMenu, setShowMenu} = useStateContext()
 
     useEffect(() => {
         if(window.innerWidth < 768) {
@@ -51,7 +51,7 @@ const NavbarMenu = () => {
           }
         }
         
-        window.addEventListener('resize', (e) => {
+        window.addEventListener('resize', () => {
             if(window.innerWidth > 768) {
                 setShowMenu(true)
             } else {

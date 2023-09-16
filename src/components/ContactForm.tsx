@@ -76,8 +76,8 @@ const Button = styled.button`
 `
 
 const ContactForm = () => {
-
-  const {register, handleSubmit, reset, watch, formState: { errors }} = useForm({mode: 'onChange'})
+  // You can use this after handleSubmit and before formState: reset, watch, 
+  const {register, handleSubmit, formState: { errors }} = useForm({mode: 'onChange'})
 
   const [sending, setSending] = useState(false)
   const {setActive} = useStateContext()

@@ -1,10 +1,10 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import { useStateContext } from './context/ContextProvider'
+// import { useState, useEffect } from 'react'
+// import { useStateContext } from './context/ContextProvider'
 import './App.css'
 // Pages
 import Navbar from './components/Navbar'

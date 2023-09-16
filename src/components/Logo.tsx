@@ -2,9 +2,6 @@ import styled from 'styled-components'
 import { useStateContext } from '../context/ContextProvider';
 import { NavLink } from 'react-router-dom';
 
-import WhatshotIcon from '@mui/icons-material/Whatshot';
-
-
 const Img = styled.img`
     width: 50px;
     height: 50px;
@@ -51,7 +48,7 @@ const Span = styled.span`
 `
 
 const Logo = () => {
-    const {showMenu, setShowMenu} = useStateContext()
+    const {setShowMenu} = useStateContext()
 
     const handleClick = () => {
         if(window.innerWidth < 768) setShowMenu(false)

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode, Dispatch, SetStateAction } from "react";
+import { createContext, useContext, useState, ReactNode, Dispatch, SetStateAction } from "react";
 
 // createContext function accept DEFAULT VALUE. Default value is important for autocomplete purpose.
 const StateContext = createContext<{
