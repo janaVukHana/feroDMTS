@@ -9,7 +9,7 @@ const Header = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../public/images/hero/hero_02.jpg');
+    background-image: url('../images/hero/hero_02.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
