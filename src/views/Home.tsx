@@ -1,19 +1,11 @@
 import styled from 'styled-components'
+import Header from '../components/StyledComponents/Header'
+
 import Hero from '../components/Hero'
 import Ogradjivanje from '../components/Ogradjivanje'
 import Partner from '../components/Partner'
-
-const Header = styled.header`
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('../images/hero/hero_02.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-`
+// Delete Test later
+// import Test from '../components/Test'
 
 const Container = styled.div`
     width: 80%;
@@ -36,6 +28,8 @@ const Home = () => {
                     <Hero />
                 </Container>
             </Header>
+                    {/* Later delete this and some styled components */}
+                    {/* <Test /> */}
             <Ogradjivanje />  
             <Partner />  
             {/* Other sections here */}
