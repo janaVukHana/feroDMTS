@@ -1,33 +1,11 @@
 import styled from 'styled-components'
+import Section from '../components/StyledComponents/Section'
+import Container from '../components/StyledComponents/Container'
+import Flex from '../components/StyledComponents/Flex'
+import H1 from '../components/StyledComponents/H1'
+
 import {useState, useEffect} from 'react'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
-
-const Section = styled.section`
-    margin-top: 55px;
-    padding: 3rem 0;
-`
-
-const Container = styled.div`
-    width: 80%;
-    margin: 0 auto;
-    
-`
-
-const MainTitle = styled.h1`
-    text-align: center;
-    margin-bottom: 2rem;
-`
-const Flex = styled.section`
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 2rem;
-    margin-bottom: 2rem;
-
-    @media(max-width: 992px) {
-        flex-direction: column;
-    }
-`
 
 const Img = styled.img`
     max-width: 100%;
@@ -50,12 +28,12 @@ const AboutUs = () => {
         return () => clearTimeout(timer);
     }, []);
     return (
-        <Section>
+        <Section $mt>
             <Container>
-                <MainTitle>O nama</MainTitle>
+                <H1>O nama</H1>
                 
                 <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true} animatePreScroll={shouldAnimatePreScroll}>
-                    <Flex>
+                    <Flex $stretch $gap>
 
                         <Paragraph>
                             "Osnivanje maloprodajnog objekta i formiranje specijalizovane prodavnice u vidu gvožđare-farbare 
@@ -70,7 +48,7 @@ const AboutUs = () => {
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true} animatePreScroll={shouldAnimatePreScroll}>
 
-                    <Flex>
+                    <Flex $stretch $gap>
                         <div>
                             <Img src="./images/shop/fero_shop.jpg" alt="slika prodavnice - Novi Sad" />
                         </div>

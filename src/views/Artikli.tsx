@@ -1,34 +1,16 @@
-import styled from 'styled-components'
+import Section from '../components/StyledComponents/Section'
+import Container from '../components/StyledComponents/Container'
+import Flex from '../components/StyledComponents/Flex'
+import H1 from '../components/StyledComponents/H1'
+
 import Card from '../components/Card'
-
-const Section = styled.section`
-    margin-top: 55px;
-    padding: 3rem 0;
-`
-
-const Container = styled.div`
-    width: 80%;
-    margin: 0 auto;
-`
-
-const MainTitle = styled.h1`
-    text-align: center;
-    margin-bottom: 2rem;
-`
-
-const Flex = styled.section`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-`
 
 const Artikli = () => {
     return (
-        <Section>
+        <Section $mt>
             <Container>
-                <MainTitle>Artikli</MainTitle>
-                <Flex>
+                <H1 $center>Artikli</H1>
+                <Flex $wrap>
                     <Card />
                 </Flex>
             </Container>

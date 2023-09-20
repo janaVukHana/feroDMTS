@@ -1,40 +1,45 @@
 import styled from 'styled-components'
+import Flex from '../components/StyledComponents/Flex'
+import H1 from '../components/StyledComponents/H1'
+import Paragraph from '../components/StyledComponents/Paragraph'
+
+
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom'
 
-const Section = styled.section`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem 2rem;
-    border-radius: 5px;
-    background-color: rgba(0,0,0,0.5);
-    color: #fff;
-    backdrop-filter: blur(5px);
+// const Section = styled.section`
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 3rem 1rem;
+//     border-radius: 5px;
+//     background-color: rgba(0,0,0,0.5);
+//     color: #fff;
+//     backdrop-filter: blur(5px);
 
-    @media(max-width: 600px) {
-        padding: 2rem 1rem;
-    }
-`
+//     @media(max-width: 600px) {
+//         padding: 2rem 1rem;
+//     }
+// `
 
-const Title = styled.h1`
-    text-align: center;
-    margin-bottom: 1.2rem;
+// const Title = styled.h1`
+//     text-align: center;
+//     margin-bottom: 1.2rem;
 
-    @media(max-width: 600px) {
-        font-size: 1.6rem;
-    }
-`
+//     @media(max-width: 600px) {
+//         font-size: 1.6rem;
+//     }
+// `
 
-const Paragraph = styled.p`
-    margin-bottom: 0.6rem;
+// const Paragraph = styled.p`
+//     margin-bottom: 0.6rem;
 
-    @media(max-width: 600px) {
-        font-size: 1rem;
-    }
-`
+//     @media(max-width: 600px) {
+//         font-size: 1rem;
+//     }
+// `
 
 const StyledLink = styled(Link)`
     color: #fff;
@@ -66,22 +71,22 @@ const Hero = () => {
         return () => clearTimeout(timer);
     }, []);
     return (
-            <Section>
+            <Flex $filter $padding $bg>
                 <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true} animatePreScroll={shouldAnimatePreScroll}>
-                        <Title>Gvožđara u tvom komšiluku</Title>
+                        <H1>Gvožđara u tvom komšiluku</H1>
                         <Paragraph>
                                 Dobrodošli u našu gvožđaru! Kod nas možete pronaći sve vrste metalnih materijala 
                                 za Vaše projekte, uključujući čelične šipke, cevi, limove, žice, ograde, kapije i 
                                 još mnogo toga.
-                            </Paragraph>
-                            <Paragraph>
-                                Naš tim stručnjaka je tu da Vam pomogne pronaći najbolje rešenje za Vaše potrebe. 
-                                Posetite nas danas i uverite se u našu široku ponudu i kvalitet usluge.
-                            </Paragraph>
-                            
-                            <StyledLink to="/artikli">Pogledaj ponudu</StyledLink>
+                        </Paragraph>
+                        <Paragraph>
+                            Naš tim stručnjaka je tu da Vam pomogne pronaći najbolje rešenje za Vaše potrebe. 
+                            Posetite nas danas i uverite se u našu široku ponudu i kvalitet usluge.
+                        </Paragraph>
+                        
+                        <StyledLink to="/artikli">Pogledaj ponudu</StyledLink>
                 </AnimationOnScroll>
-            </Section>
+            </Flex>
     )
 }
 

@@ -1,22 +1,14 @@
 import styled from "styled-components";
+import Flex from './StyledComponents/Flex'
+import H2 from './StyledComponents/H2'
+
 import GoBack from "./GoBack";
 
-type BastaProps = {
+type ArtikalProps = {
     title: string
     listEl: string[]
     img: string
 }
-
-const Flex = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @media(max-width: 600px) {
-        flex-direction: column;
-        align-items: stretch;
-    }
-`
 
 const FlexItem = styled.div`
     flex: 1;
@@ -28,15 +20,11 @@ const Img = styled.img`
     border-radius: 6px;
 `
 
-const H2 = styled.h2`
-    margin-bottom: 1.4rem;
-`
-
 const Li = styled.li`
     margin-bottom: 1rem;
 `
 
-const Artikal = ({title, listEl, img}: BastaProps) => {
+const Artikal = ({title, listEl, img}: ArtikalProps) => {
     return (
                 <Flex>
                     <GoBack />

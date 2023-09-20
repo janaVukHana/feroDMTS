@@ -1,42 +1,22 @@
 // import toolsLogos from '../assets/toolsLogosData.js'
 import toolsLogos from '../assets/toolsLogos'
-import styled from 'styled-components'
+// Styles
+import Section from './StyledComponents/Section'
+import Container from './StyledComponents/Container'
+import Flex from './StyledComponents/Flex'
+
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 import PartnerIcon from "./PartnerIcon"
 
-const Section = styled.section`
-    width: 100%;
-    padding: 3rem 0;
-    background-color: #fff;
-    color: #242424;
-`
-
-const Inner = styled.div`
-    width: 80%;
-    margin: 0 auto;
-
-    @media(max-width: 768px) {
-        width: 90%;
-    }
-`
-
-const Container = styled.section`
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-`
-
-export default function Partner() {
+const Partner = () => {
 
     return (
         <Section>
             <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true} animatePreScroll={true}>
-            <Inner>
+            <Container>
                 {/* <h2>Naši partneri</h2> */}
-                <Container>
+                <Flex $gap $wrap $justify="start" $rowsm>
                 {
                     toolsLogos.map(item => {
                         return (
@@ -44,9 +24,11 @@ export default function Partner() {
                         )
                     })
                 }
-                </Container>
-            </Inner>
+                </Flex>
+            </Container>
             </AnimationOnScroll>
         </Section>
     )
 }
+
+export default Partner;

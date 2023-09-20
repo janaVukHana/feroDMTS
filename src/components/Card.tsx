@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import H2 from './StyledComponents/H2'
+import Paragraph from './StyledComponents/Paragraph'
+
 import { useState, useEffect } from 'react'
 import asortiman from '../assets/asortiman'
 import {Link} from 'react-router-dom'
@@ -56,15 +59,6 @@ const DescriptionDiv = styled.div`
     flex: 1;
     width: 100%;
 `
-const Title = styled.h2`
-    color: #242424;
-    margin-bottom: 1rem;
-`
-
-const Paragraph = styled.p`
-    color: #242424;
-    margin-bottom: 1rem;
-`
 
 const StyledLink = styled(Link)`
     display: inline-block;
@@ -106,8 +100,8 @@ const Card = () => {
                                     <Img src={item.img} alt={item.title} />
                                 </ImgDiv>
                                 <DescriptionDiv>
-                                    <Title>{item.title}</Title>
-                                    <Paragraph>{item.opis}</Paragraph>
+                                    <H2 $color>{item.title}</H2>
+                                    <Paragraph $color>{item.opis}</Paragraph>
                                     <StyledLink to={item.link}>Pogledaj proizvode</StyledLink>
                                 </DescriptionDiv>
                             </Flex>
