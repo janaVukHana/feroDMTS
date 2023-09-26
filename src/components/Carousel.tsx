@@ -43,7 +43,8 @@ export default function Carousel() {
   const [currentImage, setCurrentImage] = useState(0);
 
   const images = [
-    './images/hero/hero_graphite.jpg',
+    './images/ogradjivanje/ograda_01.jpg',
+    './images/ogradjivanje/ograda_02.jpg',
     './images/hero/hero_01.jpg',
     './images/hero/hero_02.jpg',
     './images/asortiman/wire.jpg',
