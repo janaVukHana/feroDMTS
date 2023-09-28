@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Flex from './StyledComponents/Flex'
-import H2 from './StyledComponents/H2'
+import Flex from './StyledComponents/FlexStyled'
+import H2 from './StyledComponents/H2Styled'
 
 import GoBack from "./GoBack";
 

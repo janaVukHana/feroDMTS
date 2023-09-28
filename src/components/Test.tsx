@@ -1,5 +1,5 @@
 import TestStyle from './StyledComponents/TestStyle';
-import H2 from './StyledComponents/H2';
+import H2 from './StyledComponents/H2Styled';
 
 const Test: React.FC = () => {
     return (

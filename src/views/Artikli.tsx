@@ -1,8 +1,6 @@
-import Section from '../components/StyledComponents/Section'
-import Container from '../components/StyledComponents/Container'
-import Flex from '../components/StyledComponents/Flex'
-import H1 from '../components/StyledComponents/H1'
-
+import Section from '../components/StyledComponents/SectionStyled'
+import Container from '../components/StyledComponents/ContainerStyled'
+import H1 from '../components/StyledComponents/H1Styled'
 import Card from '../components/Card'
 
 const Artikli = () => {
@@ -10,9 +8,7 @@ const Artikli = () => {
         <Section $mt>
             <Container>
                 <H1 $center>Artikli</H1>
-                <Flex $wrap>
-                    <Card />
-                </Flex>
+                <Card />
             </Container>
         </Section>
     )

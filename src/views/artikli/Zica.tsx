@@ -49,27 +49,24 @@ const Zica = () => {
                     Nudimo široku paletu žica, pletiva, mreža i sita za različite namene. Bilo da Vam treba 
                     zaštitna ograda, ograđivanje dvorišta ili voćnjaka, zaštita od insekata ili neka 
                     druga primena, mi imamo sve što Vam treba. 
-                    Naši proizvodi su visokog kvaliteta i ispunjavaju najviše standarde industrije.                
+                    Naši proizvodi su visokog kvaliteta i ispunjavaju najviše standarde.                
                 </Paragraph>
             </Container>
             <Container>
                 <Artikal 
                     title="Žica paljena"
                     listEl={[
-                        'paljena žica Ø 0.8 mm (cvećarska)',
-                        'paljena žica Ø 1.2 mm (armiracka)',
-                        'paljena žica Ø 2.0 mm (tesarska)',
-                        'paljena žica Ø 3.1 mm (tesarska)'
+                        'paljena žica Ø 0.8 - 4.0 mm',
                     ]}
                     img="./images/asortiman/zica.jpg"
                 />
             </Container>
             <Container>
                 <H2>Žica pocinkovana</H2>
-                <List><Li>pocinkovana žica Ø 0.7 - 4.0 mm</Li></List>
+                <List><Li>pocinkovana žica Ø 0.45 - 4.0 mm</Li></List>
                 <HR />
                 <H2>Žica PVC</H2>
-                <List><Li>plastificirana žica Ø 1.8 - 3.1 mm</Li></List>
+                <List><Li>plastificirana žica Ø 1.0 - 3.1 mm</Li></List>
                 <HR />
                 <H2>Pletiva</H2>
                 <Paragraph>

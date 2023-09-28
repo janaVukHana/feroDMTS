@@ -1,9 +1,9 @@
 // import toolsLogos from '../assets/toolsLogosData.js'
 import toolsLogos from '../assets/toolsLogos'
 // Styles
-import Section from './StyledComponents/Section'
-import Container from './StyledComponents/Container'
-import Flex from './StyledComponents/Flex'
+import Section from './StyledComponents/SectionStyled'
+import Container from './StyledComponents/ContainerStyled'
+import Flex from './StyledComponents/FlexStyled'
 
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 

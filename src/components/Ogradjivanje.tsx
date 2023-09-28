@@ -1,10 +1,10 @@
     // Styles
     import styled from 'styled-components'
-    import Section from './StyledComponents/Section'
-    import Container from './StyledComponents/Container'
-    import Flex from './StyledComponents/Flex'
-    import H2 from './StyledComponents/H2'
-    import Paragraph from './StyledComponents/Paragraph'
+    import Section from './StyledComponents/SectionStyled'
+    import Container from './StyledComponents/ContainerStyled'
+    import Flex from './StyledComponents/FlexStyled'
+    import H2 from './StyledComponents/H2Styled'
+    import Paragraph from './StyledComponents/ParagraphStyled'
 
     import {AnimationOnScroll} from 'react-animation-on-scroll'
 

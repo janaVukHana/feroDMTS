@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import H2 from './StyledComponents/H2'
-import Paragraph from './StyledComponents/Paragraph'
+import Flex from './StyledComponents/FlexStyled'
+import H2 from './StyledComponents/H2Styled'
 
 import { useState, useEffect } from 'react'
 import asortiman from '../assets/asortiman'
@@ -8,60 +8,35 @@ import {Link} from 'react-router-dom'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const CardItem = styled.div`
-    flex: 1 1 100%;
-    max-width: 650px;
-    align-self: center;
-    margin-bottom: 2rem;
-`
-    
-const Flex = styled.div`
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 24px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border-radius: 24px;
+    flex: 0 0 30%;
 
-    @media(max-width: 600px) {
-        flex-direction: column;
-        align-items: stretch;
+    @media(max-width: 992px) {
+        flex: 0 0 45%;
     }
 `
-const ImgDiv = styled.div`
-    background-color: #fff;
-    margin-left: -30px;
-    margin-right: 16px;
-    border-radius: 24px;
-    overflow: hidden;
 
-    @media(max-width: 600px) {
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: -30px;
-        margin-bottom: 16px;
-    }
+const CardContainer = styled.div`
+    position: relative;
+    background-color: #fff;
+    padding-bottom: 3rem;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #242424;
 `
 
 const Img = styled.img`
-    max-width: 200px;
     width: 100%;
-    height: 150px;
-    object-fit: cover;
+    max-width: 100%;
+    height: 200px;
     vertical-align: middle;
-
-    @media(max-width: 600px) {
-        max-width: 600px;
-    }
+    object-fit: cover;
 `
 
-const DescriptionDiv = styled.div`
-    flex: 1;
-    width: 100%;
+const CardContent = styled.div`
+    padding: 0.5rem;
 `
 
 const StyledLink = styled(Link)`
-    display: inline-block;
+    display: block;
     background-color: var(--red);
     border: 1px solid var(--red);
     border-radius: 6px;
@@ -72,6 +47,9 @@ const StyledLink = styled(Link)`
     cursor: pointer;
     opacity: 0.8;
     text-decoration: none;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
 
     &:hover {
         opacity: 1;
@@ -90,26 +68,23 @@ const Card = () => {
     }, []);
 
     return (
-        <>
+        <Flex $gap $wrap $stretch $justify='start'>
             {asortiman.map(item => {
                 return (
                     <CardItem key={item.title}>
                         <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true} animatePreScroll={shouldAnimatePreScroll}>
-                            <Flex>
-                                <ImgDiv>
-                                    <Img src={item.img} alt={item.title} />
-                                </ImgDiv>
-                                <DescriptionDiv>
+                            <CardContainer>
+                                <Img src={item.img} alt={item.title} />
+                                <CardContent>
                                     <H2 $color>{item.title}</H2>
-                                    <Paragraph $color>{item.opis}</Paragraph>
-                                    <StyledLink to={item.link}>Pogledaj proizvode</StyledLink>
-                                </DescriptionDiv>
-                            </Flex>
+                                    <StyledLink to={item.link}>Istrazi</StyledLink>
+                                </CardContent>
+                            </CardContainer>
                         </AnimationOnScroll>
                     </CardItem>
                 )
             })}            
-        </>
+        </Flex>
     )
 }
 
