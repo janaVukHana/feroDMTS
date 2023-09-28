@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import Flex from '../components/StyledComponents/Flex'
-import H1 from '../components/StyledComponents/H1'
-import Paragraph from '../components/StyledComponents/Paragraph'
+import Flex from './StyledComponents/FlexStyled'
+import H1 from './StyledComponents/H1Styled'
+import Paragraph from './StyledComponents/ParagraphStyled'
 
 
 import { AnimationOnScroll } from 'react-animation-on-scroll';
@@ -71,13 +71,12 @@ const Hero = () => {
         return () => clearTimeout(timer);
     }, []);
     return (
-            <Flex $filter $padding $bg>
-                <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true} animatePreScroll={shouldAnimatePreScroll}>
-                        <H1>Gvožđara u tvom komšiluku</H1>
+            <Flex $filter $padding $bg style={{background: "url('./images/asortiman/wire_1.jpg') contain"}} >
+                <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true} animatePreScroll={shouldAnimatePreScroll}>
+                        <H1 $center>Gvožđara u tvom komšiluku</H1>
                         <Paragraph>
-                                Dobrodošli u našu gvožđaru! Kod nas možete pronaći sve vrste metalnih materijala 
-                                za Vaše projekte, uključujući čelične šipke, cevi, limove, žice, ograde, kapije i 
-                                još mnogo toga.
+                                <span style={{fontSize: '2rem'}}>DOBRODOŠLI</span> u svet žica, mreža, pletiva, sita, kompletnog gvožđarskog i farbarskog 
+                                asortimana kao i mnoge opreme za domaćinstvo...
                         </Paragraph>
                         <Paragraph>
                             Naš tim stručnjaka je tu da Vam pomogne pronaći najbolje rešenje za Vaše potrebe. 
