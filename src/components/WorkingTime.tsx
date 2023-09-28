@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {AnimationOnScroll} from 'react-animation-on-scroll'
-    
+import Flex from './StyledComponents/FlexStyled'
+
 const SectionTime = styled.section`
     width: 100%;
     margin-bottom: 2rem;
@@ -28,15 +29,19 @@ const Paragraph = styled.p`
 
 const WorkingTime = () => {
     return (
-        
-        <SectionTime className="working-time">
-            <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true} animatePreScroll={false}>
-                <Title>Radno Vreme</Title>
-                <Paragraph>Ponedeljak - Petak <span>07:00 - 16:00</span></Paragraph>
-                <Paragraph>Subota <span>07:00 - 15:00</span></Paragraph>
-                <Paragraph>Nedelja <span>Neradan dan</span></Paragraph>
-            </AnimationOnScroll>
-        </SectionTime>
+        <Flex>
+            <SectionTime>
+                <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true} animatePreScroll={false}>
+                            <Title>Radno Vreme</Title>
+                            <Paragraph>Ponedeljak - Petak <span>07:00 - 16:00 (Novi Sad)</span></Paragraph>
+                            <Paragraph>Ponedeljak - Petak <span>07:00 - 17:00 (Kikinda)</span></Paragraph>
+                            <Paragraph>Subota <span>07:00 - 14:00</span></Paragraph>
+                            <Paragraph>Nedelja <span>Neradan dan</span></Paragraph>
+                </AnimationOnScroll>
+                {/* kikinda radno vreme od 7 do 17 */}
+
+            </SectionTime>
+        </Flex>
     )
 }
 
