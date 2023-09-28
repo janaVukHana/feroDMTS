@@ -120,12 +120,12 @@ const ContactCity = ({city, adresa, link, telefon, email}: ContactCityProps) => 
                         </p>
                     </div>
                 </Info>
-                    <Iframe 
-                        frameBorder="0" 
-                        height="200" 
-                        scrolling="no"
-                        src={`https://maps.google.com?saddr=${adresa}, Serbia&z=12&output=embed`}
-                        width="100%"></Iframe>
+                <Iframe 
+                    frameBorder="0" 
+                    height="200" 
+                    scrolling="no"
+                    src={`https://maps.google.com?saddr=${adresa}, Serbia&z=12&output=embed`}
+                    width="100%"></Iframe>
                 </AnimationOnScroll>
             </FlexItem>
     )

@@ -11,6 +11,7 @@ import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons'
 import TextField from '@mui/material/TextField';
 import Spinner from "./Spinner";
 import Notification from "./Notification";
+import Flex from "./StyledComponents/FlexStyled";
 
 const Section = styled.section`
   background-color: inherit;
@@ -167,60 +168,63 @@ const ContactForm = () => {
   }, [success]);
 
   return (
-    <Section id="contact" ref={ref}>
-        <AnimationOnScroll animateIn="animate__fadeIn">
-            <Form ref={formRef} onSubmit={handleSubmit(handleMessage, handleError)}>
-                <Img src="./images/icon/icon_contact.jpg" alt="icon tool man" />
-                <Title>Pošalji poruku</Title>
-              
-                <TextField
-                        fullWidth
-                        variant="outlined"
-                        label="Ime"
-                        error={!!errors?.name}
-                        helperText={errors?.name && <>{errors.name.message}</>}
-                        id="name"
-                        {...register('name', registerOptions.name)}
-                        style={{marginBottom: '1rem'}}
-                    />
-                <TextField
-                        fullWidth
-                        variant="outlined"
-                        label="Email"
-                        error={!!errors?.email}
-                        helperText={errors?.email && <>{errors.email.message}</>}
-                        id="email"
-                        type="email"
-                        {...register('email', registerOptions.email)}
-                        style={{marginBottom: '1rem'}}
+    <Flex>
 
-                    />
-                <TextField
-                        fullWidth
-                        variant='outlined'
-                        label="Poruka"
-                        error={!!errors?.message}
-                        helperText={errors?.message && <>{errors.message.message}</>}
-                        id="message"
-                        multiline
-                        rows={4}
-                        inputProps={{
-                            style: {
-                                whiteSpace: 'pre-wrap'
-                            }
-                        }}
-                        {...register('message', registerOptions.message)}
-                        style={{marginBottom: '1rem'}}
-                    />
+      <Section id="contact" ref={ref}>
+          <AnimationOnScroll animateIn="animate__fadeIn">
+              <Form ref={formRef} onSubmit={handleSubmit(handleMessage, handleError)}>
+                  <Img src="./images/icon/icon_contact.jpg" alt="icon tool man" />
+                  <Title>Pošalji poruku</Title>
                 
-                <Button type="submit"><FontAwesomeIcon icon={faScrewdriverWrench} size="lg" />&nbsp;&nbsp;Pošalji</Button>
-            </Form>
-        </AnimationOnScroll>
-      {/* While sending data show Spinner and prevent user to do anything! */}
-      {sending && <Spinner />}
-      {/* Show message is data is send with success */}
-      {success &&  <Notification />}
-    </Section>
+                  <TextField
+                          fullWidth
+                          variant="outlined"
+                          label="Ime"
+                          error={!!errors?.name}
+                          helperText={errors?.name && <>{errors.name.message}</>}
+                          id="name"
+                          {...register('name', registerOptions.name)}
+                          style={{marginBottom: '1rem'}}
+                      />
+                  <TextField
+                          fullWidth
+                          variant="outlined"
+                          label="Email"
+                          error={!!errors?.email}
+                          helperText={errors?.email && <>{errors.email.message}</>}
+                          id="email"
+                          type="email"
+                          {...register('email', registerOptions.email)}
+                          style={{marginBottom: '1rem'}}
+
+                      />
+                  <TextField
+                          fullWidth
+                          variant='outlined'
+                          label="Poruka"
+                          error={!!errors?.message}
+                          helperText={errors?.message && <>{errors.message.message}</>}
+                          id="message"
+                          multiline
+                          rows={4}
+                          inputProps={{
+                              style: {
+                                  whiteSpace: 'pre-wrap'
+                              }
+                          }}
+                          {...register('message', registerOptions.message)}
+                          style={{marginBottom: '1rem'}}
+                      />
+                  
+                  <Button type="submit"><FontAwesomeIcon icon={faScrewdriverWrench} size="lg" />&nbsp;&nbsp;Pošalji</Button>
+              </Form>
+          </AnimationOnScroll>
+        {/* While sending data show Spinner and prevent user to do anything! */}
+        {sending && <Spinner />}
+        {/* Show message is data is send with success */}
+        {success &&  <Notification />}
+      </Section>
+    </Flex>
   );
 }
 
